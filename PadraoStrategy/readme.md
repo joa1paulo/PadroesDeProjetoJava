@@ -1,4 +1,4 @@
-﻿# Padrão Strategy
+# Padrão Strategy
 
 Este projeto aplica o padrão de projeto Strategy para permitir que diferentes robôs alterem dinamicamente sua forma de se locomover, comunicar e executar ações, sem mudar a estrutura base da classe `Robot`.
 
