@@ -28,9 +28,9 @@ classDiagram
         +finalizarMissao() : void
         +gerarRelatorio() : void
         +deveGerarRelatorio() : boolean
-        {abstract} +locomover() : void
-        {abstract} +comunicar() : void
-        {abstract} +executarAcao() : void
+        +locomover() : void
+        +comunicar() : void
+        +executarAcao() : void
     }
 
     class RoboEntrega {
