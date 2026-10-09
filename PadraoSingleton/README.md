@@ -1,9 +1,11 @@
+# Diagrama UML de Classes — Sistema de Vendas
+
 ```mermaid
 classDiagram
     direction TB
 
     class VendedorSingleton {
-        -VendedorSingleton instance$
+        -VendedorSingleton instance
         -String nome
         -String Endereco
         -String email
@@ -12,7 +14,7 @@ classDiagram
         -EstrategiaDesconto desconto
         -List~ObservadorVenda~ observadores
         -VendedorSingleton()
-        +getInstance() VendedorSingleton$
+        +getInstance() VendedorSingleton
         +setNome(String) void
         +setEndereco(String) void
         +setEmail(String) void
@@ -57,35 +59,45 @@ classDiagram
         +atualizar() void
     }
 
-    %% Singleton
-    classDef singleton fill:#17365D,color:#FFFFFF,stroke:#0B1F33,stroke-width:3px
-
-    %% Strategy
-    classDef strategyInterface fill:#E4D7FA,color:#38205E,stroke:#8056B3,stroke-width:2px
-    classDef strategyConcrete fill:#F3EAFE,color:#38205E,stroke:#8056B3,stroke-width:1.5px
-
-    %% Observer
-    classDef observerInterface fill:#D9EAD3,color:#274E13,stroke:#6AA84F,stroke-width:2px
-    classDef observerConcrete fill:#EAF4E5,color:#274E13,stroke:#6AA84F,stroke-width:1.5px
-
-    class VendedorSingleton singleton
-    class EstrategiaDesconto strategyInterface
-    class DescontoNormal,DescontoPromocional strategyConcrete
-    class ObservadorVenda observerInterface
-    class ObservadorEstoque,ObservadorFinanceiro observerConcrete
-
-    %% Relacionamentos do Strategy
     VendedorSingleton --> EstrategiaDesconto : utiliza
     EstrategiaDesconto <|.. DescontoNormal : implementa
     EstrategiaDesconto <|.. DescontoPromocional : implementa
 
-    %% Relacionamentos do Observer
-    VendedorSingleton "1" o--> "0..*" ObservadorVenda : mantém coleção
+    VendedorSingleton "1" o--> "0..*" ObservadorVenda : observadores
     ObservadorVenda <|.. ObservadorEstoque : implementa
     ObservadorVenda <|.. ObservadorFinanceiro : implementa
 
-    %% Referências dos observadores ao sujeito
     ObservadorEstoque --> VendedorSingleton : consulta getters
     ObservadorFinanceiro --> VendedorSingleton : consulta getters
+
+    classDef singleton fill:#17365D,color:#FFFFFF,stroke:#0B1F33,stroke-width:3px
+    classDef strategyInterface fill:#E4D7FA,color:#38205E,stroke:#8056B3,stroke-width:2px
+    classDef strategyConcrete fill:#F3EAFE,color:#38205E,stroke:#8056B3,stroke-width:2px
+    classDef observerInterface fill:#D9EAD3,color:#274E13,stroke:#6AA84F,stroke-width:2px
+    classDef observerConcrete fill:#EAF4E5,color:#274E13,stroke:#6AA84F,stroke-width:2px
+
+    class VendedorSingleton singleton
+    class EstrategiaDesconto strategyInterface
+    class DescontoNormal strategyConcrete
+    class DescontoPromocional strategyConcrete
+    class ObservadorVenda observerInterface
+    class ObservadorEstoque observerConcrete
+    class ObservadorFinanceiro observerConcrete
 ```
 
+**Notas UML:**
+
+* `VendedorSingleton.instance` é estático e `VendedorSingleton()` é privado.
+* `getInstance()` também é estático.
+* As duas estratégias implementam `EstrategiaDesconto`.
+* Os dois observadores implementam `ObservadorVenda`.
+* Os observadores mantêm referências a `VendedorSingleton` e consultam `getUltimoVeiculoVendido()` e `getUltimoPrecoFinal()`.
+
+```
+
+### Um detalhe importante
+
+A sintaxe de classes e relacionamentos acima é compatível com Mermaid. Para representar os membros estáticos com rigor, porém, o diagrama precisaria usar a notação específica suportada pela versão do Mermaid instalada no seu renderizador. Os atributos e métodos foram mantidos fiéis ao código enviado.
+
+Se ainda aparecer um erro, envie a nova mensagem e eu corrijo a sintaxe exata que seu renderizador exige.
+```
