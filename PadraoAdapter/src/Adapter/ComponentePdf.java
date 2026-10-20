@@ -1,26 +1,26 @@
 package Adapter;
 
 public class ComponentePdf {
-    String conteudo;
+    private String conteudo;
 
     public void pdfFixaConteudo(String conteudo) {
         this.conteudo = conteudo;
-        System.out.println("Servico legado definindo conteúdo PDF");
+        System.out.println("Serviço legado definindo conteúdo PDF: " + this.conteudo);
     }
 
-    void pdfPreparaExibicao(){
-        System.out.println("Servico legado preparando exibicao PDF");
+    public void pdfPreparaExibicao() {
+        System.out.println("Serviço legado preparando exibição PDF");
     }
 
-    void pdfAtualizaExibicao(){
-        System.out.println("Servico legado atualizando exibicao PDF");
+    public void pdfAtualiza() {
+        System.out.println("Serviço legado atualizando exibição PDF");
     }
 
-    void pdfFinalizaExibicao(){
-        System.out.println("Servico legado finalizando exibicao PDF");
+    public void pdfFinalizaExibicao() {
+        System.out.println("Serviço legado finalizando exibição PDF");
     }
 
-    void pdfEnviaImpressora(){
-        System.out.println("Servico legado enviando documento PDF a impressora");
+    public void pdfEnviaImpressora() {
+        System.out.println("Serviço legado enviando documento PDF à impressora");
     }
 }

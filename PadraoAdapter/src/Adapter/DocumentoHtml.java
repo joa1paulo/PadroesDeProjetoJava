@@ -1,20 +1,21 @@
 package Adapter;
 
-public class DocumentoHtml implements Documento{
-    String conteudo;
+public class DocumentoHtml implements Documento {
+    private String conteudo;
 
     @Override
     public void setConteudo(String conteudo) {
         this.conteudo = conteudo;
-        System.out.println("Serviço moderno salvando conteúdo html");
+        System.out.println("Serviço moderno salvando conteúdo HTML: " + this.conteudo);
     }
 
+    @Override
     public void desenha() {
-        System.out.println("Servico moderno preparando documento html");
+        System.out.println("Serviço moderno preparando documento HTML");
     }
 
+    @Override
     public void imprime() {
-        System.out.println("Servico moderno imprimindo html");
+        System.out.println("Serviço moderno imprimindo HTML");
     }
-
 }

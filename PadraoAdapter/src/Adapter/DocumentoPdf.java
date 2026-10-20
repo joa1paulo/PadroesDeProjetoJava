@@ -1,20 +1,26 @@
 package Adapter;
 
-public class DocumentoPdf implements Documento{
-    ComponentePdf legado = new ComponentePdf();
+public class DocumentoPdf implements Documento {
+    private ComponentePdf ferramentaPdf;
 
+    public DocumentoPdf(ComponentePdf ferramentaPdf) {
+        this.ferramentaPdf = ferramentaPdf;
+    }
 
+    @Override
     public void setConteudo(String conteudo) {
-        legado.pdfFixaConteudo(conteudo);
+        ferramentaPdf.pdfFixaConteudo(conteudo);
     }
 
+    @Override
     public void desenha() {
-        legado.pdfPreparaExibicao();
-        legado.pdfAtualizaExibicao();
-        legado.pdfFinalizaExibicao();
+        ferramentaPdf.pdfPreparaExibicao();
+        ferramentaPdf.pdfAtualiza();
+        ferramentaPdf.pdfFinalizaExibicao();
     }
 
+    @Override
     public void imprime() {
-        legado.pdfEnviaImpressora();
+        ferramentaPdf.pdfEnviaImpressora();
     }
 }

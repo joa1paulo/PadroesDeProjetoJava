@@ -4,33 +4,22 @@ import Adapter.Documento;
 import Singleton.Vendedor;
 
 public abstract class ProcessamentoVenda {
-    private Vendedor vendedor;
-    private Documento documento;
-    protected boolean isVendaPresencial;
+    private final Vendedor vendedor;
+    private final Documento documento;
 
     public ProcessamentoVenda(Vendedor vendedor, Documento documento) {
         this.vendedor = vendedor;
         this.documento = documento;
     }
 
-    public final void executarVenda(String veiculo,double preco){
-        double precoFinal = calcularValorFinal(preco); //calculado unica vez
-        vendedor.ConcluirVenda(veiculo,precoFinal);
-        documento.setConteudo("Veículo : "+veiculo + "vendido pelo preco de: " + precoFinal);
+    public final void executarVenda(String veiculo, double preco) {
+        prepararVenda();
+        double precoFinal = vendedor.calcularPrecoFinal(preco);
+        vendedor.concluirVenda(veiculo, precoFinal);
+        documento.setConteudo("Veículo: " + veiculo + " vendido pelo preço de: " + precoFinal);
         documento.desenha();
         documento.imprime();
-        if(isVendaPresencial){
-            prepararVenda();
-        }
     }
 
-    private double calcularValorFinal(double preco) {
-        return vendedor.CalcularPrecoVendedor(preco);
-    }
-
-    private void prepararVenda() {
-        System.out.println("Preparando Venda...");
-    }
-
-
+    protected abstract void prepararVenda();
 }

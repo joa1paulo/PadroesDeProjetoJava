@@ -1,38 +1,48 @@
+import Adapter.ComponentePdf;
 import Adapter.Documento;
 import Adapter.DocumentoHtml;
 import Adapter.DocumentoPdf;
 import Estrategias.DescontoNormal;
 import Estrategias.DescontoPromocional;
-import Observador.ObservadorEstoque;
-import Observador.ObservadorFinanceiro;
+import Observador.Estoque;
+import Observador.Financeiro;
 import Observador.ObservadorVenda;
 import Singleton.Vendedor;
-import Template.ProcessamentoOnline;
-import Template.ProcessamentoPresencial;
 import Template.ProcessamentoVenda;
+import Template.VendaOnline;
+import Template.VendaPresencial;
 
-void main(String[] args) {
-    ProcessamentoVenda processamentoVenda;
-    Vendedor vendedor = Vendedor.getInstance();
-    ObservadorVenda o1 = new ObservadorEstoque(vendedor);
-    vendedor.adicionarObservador(o1);
-    ObservadorVenda o2 = new ObservadorFinanceiro(vendedor);
-    vendedor.adicionarObservador(o2);
-    vendedor.setEstrategia(new DescontoNormal());
+public class Programa {
+    public static void main(String[] args) {
+        Vendedor vendedor = Vendedor.getInstance();
 
-    processamentoVenda = new ProcessamentoPresencial(vendedor,new DocumentoHtml());
-    processamentoVenda.executarVenda("Veiculo A", 100000);
+        ObservadorVenda estoque = new Estoque(vendedor);
+        ObservadorVenda financeiro = new Financeiro(vendedor);
+        vendedor.adicionarObservador(estoque);
+        vendedor.adicionarObservador(financeiro);
 
-    System.out.println("\n======================================================================\n");
+        vendedor.setEstrategia(new DescontoNormal());
+        ProcessamentoVenda vendaPresencial = new VendaPresencial(vendedor, new DocumentoHtml());
+        vendaPresencial.executarVenda("Veículo A", 100000);
 
-    vendedor.setEstrategia(new DescontoPromocional());
-    processamentoVenda = new ProcessamentoOnline(vendedor,new DocumentoPdf());
-    processamentoVenda.executarVenda("Veiculo B", 100000);
+        System.out.println("\n======================================================================\n");
 
-    System.out.println("\n======================================================================\n");
+        vendedor.setEstrategia(new DescontoPromocional());
+        ComponentePdf legado = new ComponentePdf();
+        Documento documentoPdf = new DocumentoPdf(legado);
+        ProcessamentoVenda vendaOnline = new VendaOnline(vendedor, documentoPdf);
+        vendaOnline.executarVenda("Veículo B", 100000);
 
-    Vendedor vendedor2 = Vendedor.getInstance();
-    if(vendedor2 == vendedor){
-        System.out.println("Vendedor na mesma instância");
+        System.out.println("\n======================================================================\n");
+
+        Vendedor vendedor2 = Vendedor.getInstance();
+        System.out.println("Mesma instância de Vendedor: " + (vendedor == vendedor2));
+
+        System.out.println("\n======================================================================\n");
+
+        vendedor.setEstrategia(new DescontoPromocional());
+        vendedor.removerObservador(financeiro);
+        ProcessamentoVenda terceiraVenda = new VendaPresencial(vendedor, new DocumentoHtml());
+        terceiraVenda.executarVenda("Veículo C", 100000);
     }
 }
