@@ -35,6 +35,7 @@ public class VendedorSingleton {
         this.email = email;
     }
 
+
     public boolean exibir(VendedorSingleton vendedor) {
         return vendedor == this;
     }

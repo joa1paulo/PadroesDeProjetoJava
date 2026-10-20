@@ -1,0 +1,16 @@
+package Observer;
+
+import Singleton.VendedorSingleton;
+
+public class ObservadorAuditoria implements ObservadorVenda{
+    VendedorSingleton vendedor;
+
+    public ObservadorAuditoria(VendedorSingleton vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public void atualizar(){
+        System.out.println("A AUDITORIA ficou sabendo que: ULTIMA VENDA: " + vendedor.getUltimoVeiculoVendido() + " | PRECO: R$" + vendedor.getUltimoPrecoFinal());
+    }
+
+}

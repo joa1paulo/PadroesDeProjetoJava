@@ -33,4 +33,14 @@ void main(){
 
     System.out.println("Mesmo vendedor?" + v2.exibir(v1));
 
+    System.out.println("=============================================================================");
+    System.out.println("NO LAB ( DESCONTO DE FUNCIONARIO E OBSERVADOR AUDITORIA ( REMOVI OS OUTROS 2)");
+    System.out.println("=============================================================================");
+
+    v1.adicionarObservador(new ObservadorAuditoria(v1));
+    v1.removerObservador(obsEstoque);
+    v1.removerObservador(obsFinanceiro);
+    v1.setEstrategia(new DescontoFuncionario());
+    v1.concluirVenda("CAMARO",80000);
+
 }
