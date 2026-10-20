@@ -1,4 +1,3 @@
-```
 classDiagram
     direction TB
 
@@ -108,8 +107,3 @@ classDiagram
     class Estoque observer
     class Financeiro observer
     class Programa main
-
-```
-
-
-
