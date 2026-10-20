@@ -2,13 +2,14 @@
 classDiagram
     direction TB
 
-    %% Definição de Cores
-    classDef singleton fill:#FFE082,stroke:#333,stroke-width:2px;
-    classDef template fill:#FFAB91,stroke:#333,stroke-width:2px;
-    classDef adapter fill:#90CAF9,stroke:#333,stroke-width:2px;
-    classDef strategy fill:#A5D6A7,stroke:#333,stroke-width:2px;
-    classDef observer fill:#CE93D8,stroke:#333,stroke-width:2px;
-    classDef main fill:#E0E0E0,stroke:#333,stroke-width:2px;
+    %% Definição de Cores Modernas e Claras (estilo ferramenta de diagrama)
+    classDef singleton fill:#FFE082,stroke:#FBC02D,stroke-width:1.5px,rx:6,ry:6,color:#333;
+    classDef template fill:#FFCC80,stroke:#FB8C00,stroke-width:1.5px,rx:6,ry:6,color:#333;
+    classDef adapter fill:#90CAF9,stroke:#1E88E5,stroke-width:1.5px,rx:6,ry:6,color:#333;
+    classDef strategy fill:#A5D6A7,stroke:#43A047,stroke-width:1.5px,rx:6,ry:6,color:#333;
+    classDef observer fill:#CE93D8,stroke:#8E24AA,stroke-width:1.5px,rx:6,ry:6,color:#333;
+    classDef main fill:#EEEEEE,stroke:#616161,stroke-width:1.5px,rx:6,ry:6,color:#333;
+    classDef interface fill:#FFFFFF,stroke:#757575,stroke-width:2px,stroke-dasharray: 5 5,rx:4,ry:4,color:#333;
 
     %% Singleton
     class Vendedor {
@@ -78,21 +79,21 @@ classDiagram
         + main(String[] args)
     }
 
-    %% Relacionamentos de Herança e Implementação
-    VendaOnline --|> ProcessamentoVenda : herda
-    VendaPresencial --|> ProcessamentoVenda : herda
+    %% Relacionamentos de Herança e Implementação (Setas Simples)
+    VendaOnline --|> ProcessamentoVenda : "herda"
+    VendaPresencial --|> ProcessamentoVenda : "herda"
 
-    DocumentoHtml ..|> Documento : implementa
-    DocumentoPdf ..|> Documento : implementa
-    DocumentoPdf --> ComponentePdf : adapta
+    DocumentoHtml ..|> Documento : "implementa"
+    DocumentoPdf ..|> Documento : "implementa"
+    DocumentoPdf --> ComponentePdf : "adapta"
 
-    DescontoNormal ..|> EstrategiaDesconto : implementa
-    DescontoPromocional ..|> EstrategiaDesconto : implementa
+    DescontoNormal ..|> EstrategiaDesconto : "implementa"
+    DescontoPromocional ..|> EstrategiaDesconto : "implementa"
 
-    Estoque ..|> ObservadorVenda : implementa
-    Financeiro ..|> ObservadorVenda : implementa
+    Estoque ..|> ObservadorVenda : "implementa"
+    Financeiro ..|> ObservadorVenda : "implementa"
 
-    %% Aplicando Estilos nas Classes
+    %% Aplicando Estilos Modernos nas Classes
     class Vendedor singleton
     class ProcessamentoVenda template
     class VendaOnline template
@@ -108,3 +109,8 @@ classDiagram
     class Estoque observer
     class Financeiro observer
     class Programa main
+    
+    %% Estilo específico para interfaces (tracejado)
+    class Documento interface
+    class EstrategiaDesconto interface
+    class ObservadorVenda interface
