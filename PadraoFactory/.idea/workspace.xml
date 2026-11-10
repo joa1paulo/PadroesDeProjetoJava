@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6ad7bb47-f2b0-4727-8d12-7e5e852e7f8c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="22" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;joa1paulo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/joa1paulo/PadroesDeProjetoJava&quot;,
+    &quot;accountId&quot;: &quot;6e88ca20-a327-44f7-8507-a527f924860e&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="7.334698092797545E-101" />
+      <entry key="MS500" value="9.398891139098714E-21" />
+      <entry key="S2" value="1.0092972095587837E-5" />
+      <entry key="S5" value="0.012320873833474483" />
+      <entry key="S10" value="0.15994801320554822" />
+      <entry key="S30" value="1.181033422624221" />
+      <entry key="S60" value="2.3040785292006127" />
+      <entry key="M2" value="5.141944065594134" />
+      <entry key="M5" value="20.633051734999118" />
+      <entry key="M10" value="44.57186881819334" />
+      <entry key="M15" value="61.650358391646506" />
+      <entry key="M30" value="90.41375802337545" />
+      <entry key="H1" value="112.75049059883182" />
+      <entry key="H2" value="127.0166768780665" />
+      <entry key="H4" value="135.13154336136756" />
+      <entry key="D1" value="142.46606894297452" />
+      <entry key="W1" value="143.77945045460416" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0003741747949726" />
+      <entry key="S2" value="1.1390812650731044" />
+      <entry key="S5" value="1.4542630922898192" />
+      <entry key="S10" value="1.673990424479324" />
+      <entry key="S30" value="1.876767808013562" />
+      <entry key="S60" value="1.9365623940128414" />
+      <entry key="M2" value="1.9841743007080752" />
+      <entry key="M5" value="2.4156211990542333" />
+      <entry key="M10" value="3.905691696089915" />
+      <entry key="M15" value="5.381128168573731" />
+      <entry key="M30" value="8.237879729772459" />
+      <entry key="H1" value="10.605335259636899" />
+      <entry key="H2" value="12.14800829835641" />
+      <entry key="H4" value="13.031424247500919" />
+      <entry key="D1" value="13.832289737966116" />
+      <entry key="W1" value="13.975882529284627" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.0036955376825218585" />
+      <entry key="MS500" value="0.32630580566110523" />
+      <entry key="S2" value="0.8462647599838319" />
+      <entry key="S5" value="1.2880186099927415" />
+      <entry key="S10" value="1.7176676641787127" />
+      <entry key="S30" value="2.9980857663422786" />
+      <entry key="S60" value="4.2021781585407565" />
+      <entry key="M2" value="7.099244558471821" />
+      <entry key="M5" value="23.020073602983402" />
+      <entry key="M10" value="48.44411463918489" />
+      <entry key="M15" value="66.99858062072079" />
+      <entry key="M30" value="98.62557698628017" />
+      <entry key="H1" value="123.33891537033253" />
+      <entry key="H2" value="139.15497222335665" />
+      <entry key="H4" value="148.1577512138393" />
+      <entry key="D1" value="156.29743488200543" />
+      <entry key="W1" value="157.7551996187167" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3Lur7AuZyy3BDlUaRfzyZsWmKzl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Programa.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/GIT_REPOS/PadroesDeProjetoJava/PadraoFactory",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/GIT_REPOS/PadroesDeProjetoJava/PadraoFactory/Src/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GIT_REPOS\PadroesDeProjetoJava\PadraoFactory" />
+      <recent name="C:\GIT_REPOS\PadroesDeProjetoJava\PadraoFactory\main" />
+      <recent name="C:\GIT_REPOS\PadroesDeProjetoJava\PadraoFactory\.idea" />
+      <recent name="C:\GIT_REPOS\PadroesDeProjetoJava\PadraoFactory\main\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="PadraoFactory" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="PadraoFactory" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ad7bb47-f2b0-4727-8d12-7e5e852e7f8c" name="Changes" comment="" />
+      <created>1794314624594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794314624594</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/main/src/Main.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
